@@ -8,7 +8,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("home.html", title= "Home Page")
+    items = ['Apple', 'Banana', 'Cherry']
+    return render_template("home.html", title= "Home Page", items = items)
 
 @app.route("/about")
 def about():
